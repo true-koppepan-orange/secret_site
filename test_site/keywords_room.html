@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>隧ｦ鬨灘渕蝨ｰ縺ｮ遘伜ｯ?渕蝨ｰ</title></head>
+<body>
+<input type="text" id="inputText" placeholder="write here password">
+  <button onclick="showOutput()">send</button>
+  <p id="output"></p>
+<script>
+    function showOutput() {
+    const input = document.getElementById('inputText').value;
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = '';
+  
+    let redirectUrl;if (input.includes('readme')) {
+      redirectUrl = 'https://koppepan-orange-game.github.io/game_daisuki/readme.txt';
+    } else if (input.includes('koppepandesu')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('gamegasitaidesu')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('nekokawaii')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('mindustrydesu')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('secretroom')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('koppepan23')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('yurusumazizomu')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('motibetukita')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else if (input.includes('tomodatiyasasii')) {
+      redirectUrl = 'https://koppepan-orange.github.io/test_site/homepage.html';
+    } else {
+      'パスワードが違います。';
+    }
+    const link = document.createElement('a')
+    link.href = redirectUrl;
+    link.textContent = 'success!';
+    link.target = '_blank'; // 新しいタブで開く
+    outputDiv.appendChild(link)
+    }
+</script>
+</body>
+</html>
