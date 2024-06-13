@@ -40,9 +40,16 @@
     outputDiv.appendChild(link)
     }
 </script>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <span id='BUTTONDESU'><button color="#FFFFFF" class='button' onclick='invisibilty()'>　　　</button></span>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <style>
+  .moving-div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: fixed;
+    left: 0px;
+      top: 0px
+  }
   .button{
     border: 2px solid #FFFFFF;
     padding: 2px 3px;
@@ -50,9 +57,36 @@
     cursor: pointer;
   }
 </style>
+<span id="OutPut"></span><br>
+<div class="moving-div"></div>
 <script>
-  function invisibilty(){
-    document.getElementById('BUTTONDESU').innerHTML = '<a color="#000000" href="https://true-koppepan-orange.github.io/secret_site/test_site/homepage_ura.html">nice!</a>';};
+  let x = 0;
+    let y = 0
+  $(document).keydown(function(e) {
+    if (e.which === 39) { // Right arrow key code
+      x += 10;
+      $('.moving-div').css('left', x + 'px');
+    }
+    if (e.which === 37) { // Right arrow key code
+      x -= 10;
+      $('.moving-div').css('left', x + 'px');
+    }
+    if (e.which === 38) { // Right arrow key code
+      y -= 10;
+      $('.moving-div').css('top', y + 'px');
+    }
+    if (e.which === 40) { // Right arrow key code
+      y += 10;
+      $('.moving-div').css('top',y + 'px');
+    }
+    if (e.which === 90) { // Right arrow key code
+      if(x == 230 && y == 230){
+        document.getElementById('OutPut').innerHTML = '<a color="#000000" href="https://true-koppepan-orange.github.io/secret_site/test_site/homepage_ura.html">nice!</a>';
+      } else if(x == 240 && y == 240){
+        
+      }
+    }
+  });
 </script>
 </body>
 </html>
